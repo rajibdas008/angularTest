@@ -1,0 +1,19 @@
+
+<h1>Customer List</h1>
+<button routerLink="add" class="btn btn-primary">Add</button>
+<div class="row">
+  <ul>
+    <li *ngFor="let customer of customers">
+      <p>{{customer._id}}&nbsp;&nbsp;&nbsp;</p>
+      {{customer.name}}&nbsp;&nbsp;&nbsp;
+      {{customer.address}}&nbsp;&nbsp;&nbsp;
+      {{customer.status | statusPipe}}&nbsp;&nbsp;&nbsp;
+      <a routerLink="customer/{{customer._id}}">Details</a>
+
+    </li>
+  </ul>
+</div>
+
+<input type="tex" [(ngModel)]="link">
+
+

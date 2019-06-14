@@ -1,0 +1,8 @@
+<br><br><form [formGroup]="customerForm" (ngSubmit)="submit()">
+  Id: <input type="text" formControlName="id"><br>
+  Name: <input type="text" formControlName="name"><br>
+  Address: <input type="text" formControlName="address"><br>
+  Status: <input type="text" formControlName="status"><br>
+  Profile Pic: <input type="file" (change)="selectFile($event)"><br><br>
+  <button type="submit">Add</button>
+</form>
